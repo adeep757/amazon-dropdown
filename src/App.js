@@ -1,30 +1,30 @@
 import React, { Component } from "react";
-import Form from "./components/Form";
-import Message from "./components/Message";
 import SelectAutoComplete from "./components/SelectAutoComplete";
 import Avatar from "./components/Avatar/index";
+import "./index.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: "Incomplete!",
       items: [
-        { name: "Ben" },
-        { name: "Ben" },
-        { name: "Ben" },
-        { name: "Ben" },
-        { name: "Ben" }
+        { name: "Ben", email:'ben@gmail.com' },
+        { name: "Mark", email:'mark@gmail.com' },
+        { name: "James", email:'james@gmail.com' },
+        { name: "Jason", email:'jason@gmail.com' },
+        { name: "Joe", email:'joe@gmail.com' }
       ]
     };
   }
 
-  update = flag => {
-    if (flag) this.setState({ message: "Complete!" });
-  };
+  // update = flag => {
+  //   if (flag) this.setState({ message: "Complete!" });
+  // };
   render() {
     return (
-      <div className="center">
+      <div>
+      <div className="row ">
+        <form className="center">
         <select>
           <option></option>
           {this.state.items.map(item => (
@@ -33,6 +33,8 @@ class App extends Component {
             </option>
           ))}
         </select>
+        </form>
+      </div>
       </div>
     );
   }
