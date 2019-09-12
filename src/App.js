@@ -1,41 +1,31 @@
 import React, { Component } from "react";
 import SelectAutoComplete from "./components/SelectAutoComplete";
-import Avatar from "./components/Avatar/index";
+
 import "./index.css";
+import List from './components/List/index';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [
-        { name: "Ben", email:'ben@gmail.com' },
-        { name: "Mark", email:'mark@gmail.com' },
-        { name: "James", email:'james@gmail.com' },
-        { name: "Jason", email:'jason@gmail.com' },
-        { name: "Joe", email:'joe@gmail.com' }
+        { name: "Ben Stokes", email:'ben@gmail.com' },
+        { name: "Mark Pete", email:'mark@gmail.com' },
+        { name: "James Corden", email:'james@gmail.com' },
+        { name: "Jason Roy", email:'jason@gmail.com' },
+        { name: "Joe Root", email:'joe@gmail.com' }
       ]
     };
   }
 
-  // update = flag => {
-  //   if (flag) this.setState({ message: "Complete!" });
-  // };
+
   render() {
     return (
-      <div>
-      <div className="row ">
-        <form className="center">
-        <select>
-          <option></option>
-          {this.state.items.map(item => (
-            <option name={item.name}>
-              <Avatar src={''} alt={item.name}></Avatar>
-            </option>
-          ))}
-        </select>
-        </form>
+     
+      <div className="container">
+       <List list ={this.state.items}></List>
       </div>
-      </div>
+ 
     );
   }
 }
