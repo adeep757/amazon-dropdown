@@ -1,0 +1,17 @@
+.input {
+    border: unset;
+}
+
+
+.row-flex {
+    display: flex;
+}
+
+.input-container {
+    border-bottom: 2px solid #00008ba6;
+    margin-top: 0.5rem;
+}
+
+.item-danger{
+    background-color: red;
+}

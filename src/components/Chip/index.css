@@ -1,0 +1,24 @@
+.chip {
+    display: flex;
+    align-items: center;
+    background-color: #8080805c;
+    border-radius: 50px;
+    width: max-content;
+    padding-right: 0.5rem;
+    margin-right: 1rem;
+}
+
+.chip-danger {
+    display: flex;
+    align-items: center;
+    background-color: rgb(240, 145, 145);
+    border-radius: 50px;
+    width: max-content;
+    padding-right: 0.5rem;
+    margin-right: 1rem;
+}
+
+.title {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
